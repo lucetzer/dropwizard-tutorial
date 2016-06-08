@@ -13,6 +13,7 @@ import io.dropwizard.auth.basic.BasicCredentials;
 import io.dropwizard.testing.junit.ResourceTestRule;
 import org.glassfish.jersey.client.authentication.HttpAuthenticationFeature;
 import org.glassfish.jersey.test.grizzly.GrizzlyTestContainerFactory;
+import org.glassfish.jersey.test.grizzly.GrizzlyWebTestContainerFactory;
 import org.junit.BeforeClass;
 import org.junit.ClassRule;
 import org.junit.Test;
@@ -44,7 +45,7 @@ public class HelloResourceTest {
                                 )
                         )
                 )
-            .setTestContainerFactory(new GrizzlyTestContainerFactory())
+            .setTestContainerFactory(new GrizzlyWebTestContainerFactory())
             .addResource(new HelloResource())
             .build();
 
