@@ -1,7 +1,11 @@
 package com.udemy.dropbookmarks;
 
+import com.udemy.dropbookmarks.auth.HelloAuthenticator;
+import com.udemy.dropbookmarks.core.User;
 import com.udemy.dropbookmarks.resources.HelloResource;
 import io.dropwizard.Application;
+import io.dropwizard.auth.AuthFactory;
+import io.dropwizard.auth.basic.BasicAuthFactory;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
@@ -24,8 +28,16 @@ public class DropBookmarksApplication extends Application<DropBookmarksConfigura
     @Override
     public void run(final DropBookmarksConfiguration configuration,
                     final Environment environment) {
-        // TODO: implement application
         environment.jersey().register(new HelloResource());
+        environment.jersey().register(
+                AuthFactory.binder(
+                        new BasicAuthFactory<>(
+                                new HelloAuthenticator(),
+                                "SECURITY REALM",
+                                User.class
+                        )
+                )
+        );
     }
 
 }
