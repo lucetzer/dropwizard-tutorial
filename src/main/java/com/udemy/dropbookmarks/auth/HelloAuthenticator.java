@@ -8,9 +8,15 @@ import io.dropwizard.auth.basic.BasicCredentials;
 
 public class HelloAuthenticator implements Authenticator<BasicCredentials, User>{
 
+    public HelloAuthenticator(String password) {
+        this.password = password;
+    }
+
+    private String password;
+
     @Override
     public Optional<User> authenticate(BasicCredentials basicCredentials) {
-        if ("p@ssw0rd".equals(basicCredentials.getPassword())) {
+        if (password.equals(basicCredentials.getPassword())) {
             return Optional.of(new User());
         } else {
             return Optional.absent();
