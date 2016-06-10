@@ -46,9 +46,9 @@
     <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:1.7.10" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-util:9.2.9.v20150224" level="project" />
     <orderEntry type="library" name="Maven: io.dropwizard:dropwizard-metrics:0.8.2" level="project" />
-    <orderEntry type="library" name="Maven: io.dropwizard:dropwizard-jersey:0.8.2" level="project" />
-    <orderEntry type="library" name="Maven: org.glassfish.jersey.core:jersey-server:2.19" level="project" />
-    <orderEntry type="library" name="Maven: org.glassfish.jersey.media:jersey-media-jaxb:2.19" level="project" />
+    <orderEntry type="library" exported="" name="Maven: io.dropwizard:dropwizard-jersey:0.8.2" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.glassfish.jersey.core:jersey-server:2.19" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.glassfish.jersey.media:jersey-media-jaxb:2.19" level="project" />
     <orderEntry type="library" name="Maven: javax.annotation:javax.annotation-api:1.2" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.hk2:hk2-api:2.4.0-b25" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.hk2:hk2-utils:2.4.0-b25" level="project" />

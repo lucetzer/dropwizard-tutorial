@@ -3,6 +3,8 @@ package com.udemy.dropbookmarks;
 import com.udemy.dropbookmarks.DropBookmarksApplication;
 import com.udemy.dropbookmarks.DropBookmarksConfiguration;
 import io.dropwizard.testing.junit.DropwizardAppRule;
+import org.glassfish.jersey.client.authentication.HttpAuthenticationFeature;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.ClassRule;
@@ -23,6 +25,8 @@ public class AuthIntegrationTest {
     public static final DropwizardAppRule<DropBookmarksConfiguration> RULE
             = new DropwizardAppRule<> (DropBookmarksApplication.class,
             CONFIG_PATH);
+
+    private static final HttpAuthenticationFeature FEATURE = HttpAuthenticationFeature.basic("username", "p@ssw0rd");
 
     private static final String TARGET = "http://localhost:8080";
 
@@ -49,6 +53,19 @@ public class AuthIntegrationTest {
                 .get();
 
         assertEquals(Response.Status.UNAUTHORIZED.getStatusCode(), response.getStatus());
+    }
+
+    @Test
+    public void testHappyPath() {
+        String expected = "Hello secured world!";
+        client.register(FEATURE);
+        String actual = client
+                .target(TARGET)
+                .path(PATH)
+                .request()
+                .get(String.class);
+
+        assertEquals(expected, actual);
     }
 
 }
