@@ -105,6 +105,18 @@
           </reportPlugins>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.liquibase</groupId>
+        <artifactId>liquibase-maven-plugin</artifactId>
+        <version>3.4.1</version>
+        <configuration>
+          <changeLogFile>src/main/resources/migrations.xml</changeLogFile>
+          <driver>com.mysql.jdbc.Driver</driver>
+          <url>jdbc:mysql://localhost:3306/DropBookmarks</url>
+          <username>root</username>
+          <password>1</password>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
   <dependencies>
