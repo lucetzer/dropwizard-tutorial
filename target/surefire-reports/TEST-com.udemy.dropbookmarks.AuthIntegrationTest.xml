@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.465" errors="0" skipped="0" tests="4" name="com.udemy.dropbookmarks.AuthIntegrationTest">
+<testsuite failures="0" time="0.779" errors="0" skipped="0" tests="4" name="com.udemy.dropbookmarks.AuthIntegrationTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib"/>
@@ -63,8 +63,8 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0.239" classname="com.udemy.dropbookmarks.AuthIntegrationTest" name="testHappyPath"/>
-  <testcase time="0.118" classname="com.udemy.dropbookmarks.AuthIntegrationTest" name="testHappyPathSecure"/>
-  <testcase time="0.071" classname="com.udemy.dropbookmarks.AuthIntegrationTest" name="testSadPathSecure"/>
-  <testcase time="0.037" classname="com.udemy.dropbookmarks.AuthIntegrationTest" name="testSadPath"/>
+  <testcase time="0.426" classname="com.udemy.dropbookmarks.AuthIntegrationTest" name="testHappyPath"/>
+  <testcase time="0.184" classname="com.udemy.dropbookmarks.AuthIntegrationTest" name="testHappyPathSecure"/>
+  <testcase time="0.098" classname="com.udemy.dropbookmarks.AuthIntegrationTest" name="testSadPathSecure"/>
+  <testcase time="0.071" classname="com.udemy.dropbookmarks.AuthIntegrationTest" name="testSadPath"/>
 </testsuite>
